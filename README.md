@@ -68,7 +68,20 @@ The dataset comprises 84,495 retinal optical coherence tomography (OCT) images c
 # Model Performance
 
 <div style="display: flex; justify-content: space-between;">
-  <img src="Images/ResNet50 Training.png">
+  <img src="Images/Model Perfomance.png">
 </div>
+
+# Conclusion
+
+The training time analysis for both the InceptionV3 and ResNet50 models under various configurations of workers and GPUs reveals several key insights:
+
+1.	Parallel Efficiency: The training time generally decreases with an increase in the number of GPUs, demonstrating the effectiveness of parallel processing in reducing overall training times for both models.
+2.	Scaling Impact: As the number of workers increases, the training time tends to increase, indicating that distributing the workload across multiple workers contributes to extra parallel overhead.
+3.	Model Comparison: Comparing InceptionV3 and ResNet50, it is evident that the two models exhibit similar trends in terms of training time reduction with increased parallelization. However, the actual times may vary, and the choice between models may depend on other factors like model performance and resource availability.
+4.	Optimal Configuration: The data provides valuable insights for choosing an optimal configuration based on available resources and desired training time. It highlights the trade-offs between the number of workers and GPUs, allowing users to make informed decisions for their specific use case.
+
+In conclusion, the training time analysis offers a comprehensive understanding of the performance characteristics of InceptionV3 and ResNet50 models under varying distributed training configurations, aiding users in making informed choices to achieve efficient and timely model training. From the results obtained, models trained with 4 workers utilizing 4 GPUs seems to be the optimal configuration with a training time of 514.69s for InceptionV3 model and 541.97s for ResNet50 model.
+
+
 
 
